@@ -1,0 +1,32 @@
+//============================================================================
+// Name        : Bascis.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include "string.h"
+using namespace std;
+
+int main() {
+
+	int n,cur;
+	int arr[201]={0};
+	int occurrance[1000]={0}; // its a way to check if number is found in the array elements before or not
+	cin>>n;
+	occurrance[0]=1;
+	for(int i=0; i<=n; i++)
+	{
+		cur=arr[i]-i-1;
+		if(cur<0 || occurrance[cur]==1)
+			cur=arr[i]+i+1;
+		arr[i+1]=cur;
+		occurrance[cur]=1;
+	}
+	cout<<arr[n];
+
+
+	return 0;
+}

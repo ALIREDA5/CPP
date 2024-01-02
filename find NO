@@ -1,0 +1,31 @@
+//============================================================================
+// Name        : Bascis.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include "string.h"
+using namespace std;
+
+int main() {
+	int n,i=0;
+	string str[100];
+	cin>>n;
+	while(i<n)
+	{
+		cin>>str[i];
+		i++;
+	}
+	i=0;
+	while(i<n)
+	{
+		if(str[i]=="NO"||str[i]=="No"||str[i]=="nO"||str[i]=="no")
+			cout<<str[i]<<" ";
+		i++;
+	}
+
+	return 0;
+}
